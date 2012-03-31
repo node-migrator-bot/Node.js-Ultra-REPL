@@ -19,6 +19,7 @@
   "dependencies": {
     "esprima": ">=0.9.7",
     "node-ffi": ">=0.5.0",
-    "clipboard": ">=0.0.8"
+    "clipboard": ">=0.0.8",
+    "rapper": ">=0.01"
   }
 }
