@@ -13,7 +13,7 @@ var b = module.exports = {
               'switch', 'this', 'throw', 'true', 'try', 'typeof', 'undefined', 'var',
               'void', 'while', 'with', 'yield' ],
 
-  node:     [ 'ArrayBuffer', 'Int8Array', 'Uint8Array', 'Int16Array','Uint16Array',
+  node:     [ 'ArrayBuffer', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array','Uint16Array',
               'Int32Array', 'Uint32Array', 'Float32Array', 'Float64Array', 'DataView',
               'process', 'Buffer', 'setInterval', 'clearInterval', 'setTimeout',
               'clearTimeout',  'escape', 'unescape' ],//,  'console' ],
