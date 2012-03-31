@@ -1,10 +1,41 @@
 var highlight = require('../lib/Highlighter');
 var explorePath = require('../lib/utility/explorePath');
-var exists = fs.existsSync || path.existsSync;
 
 
-module.exports = [
-  { name: 'Save Code',
+module.exports = {
+  init: function(){
+    var repl = this;
+    var histories = {};
+
+    function save(name, value){
+      api.SETTINGS.get(name+'.history.json').write(JSON.stringify(value, null, '  '));
+    }
+    function load(name){
+      var history = api.SETTINGS.get(name+'.history.json');
+      return history.exists() ? JSON.parse(history.read()) : [];
+    }
+    function change(next, last){
+      if (next.name in histories) {
+        repl.rli.history = histories[next.name];
+      } else {
+        histories[next.name] = repl.rli.history = load(next.name);
+      }
+    }
+
+    repl.on('endsession', function(){
+      for (var k in histories) {
+        save(k, histories[k])
+      }
+    });
+
+    repl.context.on('change', change);
+    repl.context.on('create', change);
+    repl.context.on('remove', change);
+
+    histories.global = repl.rli.history = load(repl.context.name);
+  },
+  commands: [{
+    name: 'Save Code',
     help: 'Format and output REPL code from this context',
     defaultTrigger: api.command('.save'),
     action: function(cmd, params){
@@ -53,5 +84,5 @@ module.exports = [
         return '';
       }
     }
-  }
-];
+  }]
+};
