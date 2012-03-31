@@ -79,9 +79,9 @@ var styling = function(){
       number: yellow1
     },
     info: {
-      header: [bg_cyan1, white2],
-      page: [bg_cyan1, white2],
-      keydisplay: [bg_cyan1, black1],
+      header:      [bg_cyan1, white2],
+      page:        [bg_cyan1, white2],
+      keydisplay:  [bg_cyan1, white2],
       cadenceDone: red2,
       cadenceLeft: red1
     },

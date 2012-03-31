@@ -41,8 +41,8 @@ module.exports = function(keywords, command, keybind){
     'Depth++'                       : keybind('alt+2'),
     'Colors'                        : keybind('f9'),
     'Set Depth'                     : command('.depth'),
-       
-    // Context Controls       
+
+    // Context Controls
     'Node Builtins'                 : keybind('alt+a'),
     'Create Context'                : keybind('ctrl+shift+up'),
     'Delete Context'                : keybind('ctrl+shift+down'),

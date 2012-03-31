@@ -3,7 +3,7 @@ module.exports = {
     builtins: true,
     hiddens: false,
     protos: true,
-    multiItemLines: false,
+    multiItemLines: true,
     globalExec: false,
     depth: 4
   },
