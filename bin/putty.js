@@ -2,7 +2,8 @@ var UltraREPL = require('../');
 var net = require('net')
 var cp = require('child_process');
 var fs = require('fs');
-fs.existsSync || (fs.existsSync = require('path').existsSync);
+var path = require('path');
+fs.existsSync || (fs.existsSync = path.existsSync);
 
 
 if (fs.existsSync('PuTTY.reg')) {
@@ -20,6 +21,12 @@ function putty(){
   net.createServer(function(socket){
     UltraREPL(socket, socket);
   }).listen(1337);
+  if (process.cwd() === __dirname) {
+  	if (!fs.existsSync('../workspace')) {
+  		fs.mkdirSync('../workspace');
+  	}
+  	process.chdir('../workspace');
+  }
 
-  cp.exec('putty.exe -load "UltraREPL"', function(putty){});
+  cp.exec('"'+path.resolve(__dirname, 'putty.exe')+'" -load "UltraREPL"', function(putty){});
 }
