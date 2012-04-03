@@ -19,7 +19,12 @@ if (fs.existsSync('PuTTY.reg')) {
 
 function putty(){
   net.createServer(function(socket){
-    UltraREPL(socket, socket);
+    var repl = UltraREPL({
+      input: socket,
+      output: socket,
+      width: 100,
+      height: 35
+    });
   }).listen(1337);
   if (process.cwd() === __dirname) {
   	if (!fs.existsSync('../workspace')) {

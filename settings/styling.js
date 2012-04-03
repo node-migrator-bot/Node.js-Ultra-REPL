@@ -72,13 +72,14 @@ var styling = function(){
     },
     intro: [ yellow2, red2 ],
     prompt: {
-      separator: [' ◊ ', green1],
-      end: [' » ', cyan1],
+      separator: ['◊', green1],
+      end: ['»', cyan1],
       '--': yellow1,
       '++': yellow2,
       number: yellow1
     },
     info: {
+      context:     [bg_cyan1, black2],
       header:      [bg_cyan1, white2],
       page:        [bg_cyan1, white2],
       keydisplay:  [bg_cyan1, white2],
