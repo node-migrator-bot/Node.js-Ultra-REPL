@@ -1,5 +1,6 @@
 module.exports = function(keywords, command, keybind){
   return {
+    //General Usage
     'Command List'       : keybind('f1'),
     'Next Page'          : keybind('pgdn'),
     'Previous Page'      : keybind('pgup'),
@@ -7,10 +8,13 @@ module.exports = function(keywords, command, keybind){
     'Clear Screen'       : keybind('esc esc'),
     'Exit'               : keybind('esc esc esc'),
     'Inspect Context'    : keybind('ctrl+z'),
-
-    'Stack Trace'        : keybind('alt+s'),
     'Load Plugin'        : command('.plugin'),
 
+    //NPM
+    'npm command'        : command('.npm'),
+    'npm search'         : command('.search'),
+
+    //Keyboard Navigation
     'Delete Right'       : keybind('del'),
     'Delete Left'        : keybind('bksp'),
     'Delete Word Right'  : keybind('ctrl+del'),
@@ -52,6 +56,7 @@ module.exports = function(keywords, command, keybind){
     'Label Context'      : command('.label'),
 
     // REPL Development
+    'Stack Trace'        : keybind('alt+s'),
     'Color Test'         : keybind('f10'),
     'Key Display'        : keybind('f11'),
     'Inject REPL'        : keybind('f12'),
