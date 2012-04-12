@@ -22,8 +22,8 @@ function putty(){
     var repl = UltraREPL({
       input: socket,
       output: socket,
-      width: 100,
-      height: 35
+      width: 140,
+      height: 40
     });
   }).listen(1337);
   if (process.cwd() === __dirname) {
