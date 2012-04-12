@@ -18,6 +18,7 @@ module.exports = {
     'contexts',
     'repldev',
     'library',
-    'clipboard'
+    'clipboard',
+    'npm',
   ]
 };
