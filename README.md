@@ -85,7 +85,13 @@ Evaluation results which are functions with readable source will be returned as 
 
 ![Syntax Hightlighting 2](https://raw.github.com/Benvie/Node.js-Ultra-REPL/master/docs/ss8.png)
 
+## Integrated npm search and usage
+
 ![Syntax Hightlighting 3](https://raw.github.com/Benvie/Node.js-Ultra-REPL/master/docs/ss6.png)
+
+![Syntax Hightlighting 3](https://raw.github.com/Benvie/Node.js-Ultra-REPL/master/docs/ss13.png)
+
+![Syntax Hightlighting 3](https://raw.github.com/Benvie/Node.js-Ultra-REPL/master/docs/ss14.png)
 
 
 ## In Progress
