@@ -13,9 +13,9 @@ module.exports = [
     action: function(){
       var result = this.context.add(new SpiderMonkeyContext);
       if (isError(result)) {
-        result = result.message.color(styling.error);
+        result = styling.error(result.message);
       } else {
-        result = 'created SpiderMonkey Context '.color(styling.context.create) + result.name;
+        result = styling.context.create('created SpiderMonkey Context ') + result.name;
       }
       this.rli.timedWrite('topright', result, 'bgbblack');
       this.refresh();

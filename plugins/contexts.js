@@ -5,13 +5,13 @@ function contextCommand(action){
   return function(){
     var result = this.context[action]();
     if (isError(result)) {
-      result = result.message.color(styling.error);
+      result = styling.error(result.message);
     } else {
-      result = action.color(styling.context[action]) + ' ' + result.displayName;
+      result = styling.context[action](action) + ' ' + result.displayName;
     }
     this.writer(this.context.view());
     if (action in styling.context) {
-      this.rli.timedWrite('topright', result, 'bgbblack');
+      this.rli.timedWrite('topright', result);
     }
     this.updatePrompt();
   }
