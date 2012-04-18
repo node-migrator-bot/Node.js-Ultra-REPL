@@ -1,3 +1,7 @@
+var C = Object.getPrototypeOf(require('repl-rainbow')(0,0,0));
+var modes = [256,16,0];
+
+
 module.exports = [
   { name: 'Hiddens',
     help: 'Toggle whether hidden properties are shown.',
@@ -27,7 +31,11 @@ module.exports = [
   { name: 'Colors',
     help: 'Toggle whether output is colored.',
     defaultTrigger: api.keybind('f9'),
-    action: api.toggle('settings', 'colors')
+    action: function(){
+      modes.push(modes.shift());
+      C.setMode(modes[0]);
+      this.refresh();
+    }
   },
   { name: 'Depth--',
     help: 'Decrease inspector recurse depth',

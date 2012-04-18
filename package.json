@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "esprima": ">=0.9.7",
-    "repl-rainbow": "~0.0.8"
+    "repl-rainbow": "~0.0.9"
   }
 }
