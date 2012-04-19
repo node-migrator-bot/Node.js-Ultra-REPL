@@ -19,7 +19,7 @@ var seagreen = R(0, 255, 220);
 var darkcyan = R(0,100,100);
 var mediumcyan = R(0,180,180);
 var orange = R(255, 180, 0);
-var lightblue = R(180, 180, 255)
+var lightblue = R(180, 180, 255);
 
 var header = R(0,30,150).fg(white);
 
