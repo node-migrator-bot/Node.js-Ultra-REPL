@@ -10,6 +10,7 @@ var medblue = R(20,0,150);
 var chartreuse = R(40, 255, 0);
 var deeppink = R(180, 0, 130);
 var gray = R(150, 150, 150);
+var darkgray = R(80, 80, 80);
 var hotpink = R(255, 0, 150);
 var brightgreen = R(0, 255, 50);
 var green = R(0, 220, 30);
@@ -74,7 +75,7 @@ module.exports = {
     property        : mediumcyan,
     variable        : seagreen,
     variable2       : darkyellow,
-    comment         : gray,
+    comment         : darkgray,
     operator        : brightred,
     conditional     : deeppink,
     loop            : deeppink,
@@ -87,7 +88,9 @@ module.exports = {
     special         : brightred,
     builtin_method  : red,
     builtin_object  : red,
-    builtin_class   :  yellow,
+    builtin_class   : yellow,
+    undefined       : R(50,100,50),
+    null            : R(50,50,100),
   },
 
   help: {
