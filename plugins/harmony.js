@@ -1,4 +1,4 @@
-var exists = fs.existsSync || path.existsSync;
+var exists = fs.existsSync || fs.existsSync;
 
 
 // npm install direct-proxies

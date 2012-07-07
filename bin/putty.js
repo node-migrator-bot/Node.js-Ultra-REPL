@@ -3,7 +3,7 @@ var net = require('net')
 var cp = require('child_process');
 var fs = require('fs');
 var path = require('path');
-fs.existsSync || (fs.existsSync = path.existsSync);
+fs.existsSync || (fs.existsSync = fs.existsSync);
 
 
 if (fs.existsSync('PuTTY.reg')) {
